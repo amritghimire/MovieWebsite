@@ -14,7 +14,7 @@ class Movie:
         response = requests.get(url)
         r = response.json()
         self.storyline = r['Plot'].encode('utf-8')
-        self.poster_image_url = r['Poster'].encode('utf-8')
+        self.poster_image_url = r['Poster']
         self.trailer_youtube_url = youtube_trailer_url
 
     def show_trailer(self):
