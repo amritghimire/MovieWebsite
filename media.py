@@ -14,6 +14,7 @@ class Movie:
         """
         self.title = movie_title
         url = "http://www.omdbapi.com/?t="+movie_title.replace(" ","+")+"&y=&plot=short&r=json"
+        # Retrieves the information on movie from api
         response = requests.get(url)
         r = response.json()
         self.storyline = r['Plot'].encode('utf-8')
